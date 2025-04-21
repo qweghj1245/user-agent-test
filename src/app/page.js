@@ -59,8 +59,6 @@ export default function Home() {
   return (
     <div>
       <div>detect by user agent: {results.userAgent}</div>
-      <div>detect by user platform: {results.platform}</div>
-      <div>detect by user features: {results.features}</div>
     </div>
   );
 }
