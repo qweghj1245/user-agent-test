@@ -7,6 +7,7 @@ export default function Home() {
     platform: "",
     features: "",
   });
+  const [userAgent, setUserAgent] = useState("");
 
   useEffect(() => {
     const detectByUserAgent = () => {
@@ -54,10 +55,12 @@ export default function Home() {
       platform: detectByPlatform(),
       features: detectByFeatures(),
     });
+    setUserAgent(window.navigator.userAgent);
   }, []);
 
   return (
     <div>
+      <div>{userAgent}</div>
       <div>detect by user agent: {results.userAgent}</div>
     </div>
   );
